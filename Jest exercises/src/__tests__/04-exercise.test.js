@@ -11,6 +11,7 @@ describe("04-exercises", () => {
   test("createUserObject returns a user object with the right properties", () => {
     expect.assertions(3);
 
+
     /**
      * Write 3 assertions that check if executing the createUserObject function
      * with the following arguments:
@@ -32,6 +33,10 @@ describe("04-exercises", () => {
      */
 
     // Write the assertions
+    const result = createUserObject("Alex", "Spence", "alex@mail.com")
+    expect(result.firstName).toBeTruthy()
+    expect(result.lastName).toBeTruthy()
+    expect(result.email).toBeTruthy()
   });
 
   test("createCorporateEmailAddress appends the corporate email domain", () => {
@@ -45,6 +50,8 @@ describe("04-exercises", () => {
      */
 
     // Write the assertion
+    const email = createCorporateEmailAddress("dani")
+    expect(email).toMatch("@company.com")
   });
 
   test("generateRandomNumberFrom1to10 returns a number between 1 and 10", () => {
@@ -56,5 +63,8 @@ describe("04-exercises", () => {
      */
 
     // Write the assertions
+    const randomNum = generateRandomNumberFrom1to10()
+    expect(randomNum).toBeLessThanOrEqual(10)
+    expect(randomNum).toBeGreaterThanOrEqual(1)
   });
 });

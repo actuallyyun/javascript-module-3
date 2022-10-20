@@ -25,6 +25,11 @@ describe("05-exercises", () => {
      */
 
     // Write the assertion
+    const result = addItemToList(prevList, newItem)
+    expect(result).toContain(newItem)
+
+
+
   });
 
   test("addUser adds a new user to the list of users", () => {
@@ -46,6 +51,9 @@ describe("05-exercises", () => {
      */
 
     // Write the assertion
+    const result = addUser(users, "maria")
+    expect(result).toContainEqual(expectedUser)
+
   });
 
   test("getWeekDays returns an array of week days", () => {
@@ -62,6 +70,8 @@ describe("05-exercises", () => {
      */
 
     // Write the assertion
+    const result = getWeekDays()
+    expect(result).toEqual(expect.arrayContaining(expectedDays))
   });
 
   test("makeAdminUser returns an object with the role property", () => {
@@ -82,6 +92,10 @@ describe("05-exercises", () => {
      */
 
     // Write the assertion
+    const result = makeAdminUser(user)
+    expect(result).toMatchObject(expectedProperty)
+
+
   });
 
   test("getUserInfo returns an object without the address properties", () => {
@@ -107,5 +121,7 @@ describe("05-exercises", () => {
      */
 
     // Write the assertion
+    const result = getUserInfo(user)
+    expect(result).not.toContain(userAddress)
   });
 });
