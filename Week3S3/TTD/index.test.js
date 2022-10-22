@@ -1,4 +1,4 @@
-import { peek, push } from "./index.js"
+import { peek, push, pop } from "./index.js"
 
 describe("Stack operations", () => {
     test('Peek should return null on an empty stack', () => {
@@ -21,5 +21,15 @@ describe("Stack operations", () => {
         expect(push(stack, element)).toEqual(["A", "B"])
     })
 
+    test("Pop raises an exception on an empty array", () => {
+        const stack = []
+
+        expect(() => pop(stack)).toThrow("Can't pop from an empty stack")
+    })
+    test("Pop removes the top element of a non-empty stack", () => {
+        const stack = ["A"]
+
+        expect(pop(stack)).toEqual([])
+    })
 
 })
