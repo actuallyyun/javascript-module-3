@@ -20,7 +20,7 @@ describe("06-exercises", () => {
    * @tip
    * done callback
    */
-  test("asyncAdd returns the sum of the numbers", () => {
+  test("asyncAdd returns the sum of the numbers", (done) => {
     expect.assertions(1);
 
     asyncAdd(5, 5, callback);
@@ -28,7 +28,6 @@ describe("06-exercises", () => {
     // Finish the test
     function callback(result) {
       expect(result).toBe(10);
-
       done()
     }
 

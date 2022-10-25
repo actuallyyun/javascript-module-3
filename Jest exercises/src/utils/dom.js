@@ -19,5 +19,6 @@ export function addButton(btnTxt) {
   button.textContent = btnTxt;
   button.classList.add("btn");
 
+  console.log('wrapper', wrapper)
   wrapper.appendChild(button);
 }
