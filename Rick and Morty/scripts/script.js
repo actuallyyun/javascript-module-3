@@ -1,4 +1,4 @@
-// Save Urls into global variables 
+
 const url = 'https://rickandmortyapi.com/api'
 let episodesUrl = "https://rickandmortyapi.com/api/episode"
 const locationsUrl = "https://rickandmortyapi.com/api/location"
